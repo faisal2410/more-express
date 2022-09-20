@@ -64,7 +64,11 @@ app.post('/process_login',(req, res, next)=>{
 app.get('/welcome',(req, res, next)=>{
     // req.cookies object will have a property for every named cookie
     // that has been set.
-    res.render('welcome',{
+    // res.render('welcome',{
+    //     username: req.cookies.username
+    // })
+    res.json({
+        message:'Welcome',
         username: req.cookies.username
     })
 })
